@@ -1,0 +1,330 @@
+@charset "utf-8";
+body{
+    width: 1920px;
+    height: 2000px;
+}
+
+.wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main_bg{
+    height: 1000px;
+    background: url(../source/mainbg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/* 맨위 탑 메뉴 영역 */
+.header_top{
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.header_top>a{
+    float: left;
+}
+
+.header_top_menu{
+    float: right;
+}
+
+.header_top_menu li{
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header_top_menu li:last-child{
+    border-left: 1px solid black;
+}
+
+.header_top_menu li a img{
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.header_top_menu li a img:hover{
+    transform: rotate(-90deg);
+}
+
+/* 해더 영역 */
+.header{
+    clear: both;
+    height: 110px;
+    background: rgb(18, 18, 18);
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgb(104, 104, 104);
+}
+
+.header_sub_r{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(42, 42, 42);
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+.h_logo{
+    width: 360px;
+    height: 100%;
+    padding: 7px 21px 2px;
+    /* z-index: 1; */
+}
+
+.header_menu{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.header_menu>li{
+    display: inline-block;
+    text-align: center;
+}
+
+.header_menu>li>a{
+    line-height: 109px;
+    font-size: 20px;
+    color: rgb(199, 199, 199);
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.header_menu>li>a:hover{
+    text-shadow: 0 0 5px white;
+    color: white;
+}
+
+.header_menu>li:hover>a{
+    text-shadow: 0 0 5px white;
+    color: white;
+}
+
+.sub{
+    color: white;
+    padding-top: 30px;
+}
+
+.sub li{
+    font-size: 16px;
+    margin: 10px 0;
+}
+.sub li a{
+    display: block;
+    color: rgb(140, 140, 140);
+}
+
+.sub li a:hover{
+    color: white;
+}
+
+.start{
+    width: 360px;
+    height: 100%;
+    background-color: rgb(64, 0, 124);
+    overflow: hidden;
+    position: relative;
+}
+
+.start a{
+    display: block;
+    width: 360px;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 109px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s;
+}
+
+.line{
+    width: 500px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.328);
+    position: absolute;
+    left: -300px;
+    top: 0;
+    transform: rotate(-30deg);
+}
+
+.start:hover .line{
+    animation: game 1s infinite alternate ease;
+}
+
+.start:hover a{
+    font-size: 40px;
+}
+
+@keyframes game{
+    0%{
+        left: -300px;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: rotate(-30deg);
+    }
+    100%{
+        left: 300px;
+        background-color: rgba(255, 255, 255, 0.7);
+        transform: rotate(-30deg);
+    }
+}
+
+/* 슬라이드&서치 영역 */
+.slide_search{
+    width: 1200px;
+    padding-top: 280px;
+    margin: 0 auto;
+}
+
+.look{
+    padding-bottom: 50px;
+    padding-left: 600px;
+}
+
+.look a{
+    display: inline-block;
+    width: 300px;
+    height: 76px;
+    background-color: orange;
+    border-radius: 38px;
+    text-align: center;
+    line-height: 76px;
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+
+.look a:hover{
+    color: white;
+    background-color: rgb(0, 102, 255);
+}
+
+.cont{
+    overflow: hidden;
+}
+
+.cont_up{
+    width: 1200px;
+    height: 508px;
+    /* background-color: yellow; */
+}
+
+.mainslide{
+    width: 890px;
+    height: 508px;
+    float: left;
+    background-color: orange;
+    position: relative;
+}
+.mainslide_box{
+    width: 890px;
+    height: 52px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.slide_img{
+    position: relative;
+}
+.slide_img a{}
+.slide_img a img{
+    position: absolute;
+}
+
+.slide_button{
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    background-color: rgba(128, 128, 128, 0.5);
+    cursor: pointer;
+}
+
+.slide_button a{}
+
+.btn_act{
+    background-color: white !important;
+}
+
+.main_right{
+    width: 300px;
+    height: 508px;
+    float: right;
+    background-color: rgb(47, 47, 47);
+}
+.main_right_img{
+    width: 300px;
+    height: 220px;
+    background: url(../source/main_right.jpg) center center no-repeat;
+    background-size: 100%;
+    transition: all 0.3s;
+}
+
+.main_right_img:hover{
+    background-size: 105%;
+}
+
+.main_right_img a{
+    display: block;
+    height: 220px;
+}
+.main_info{
+    width: 300px;
+    height: 288px;
+    background-color: rgb(54, 54, 54);
+    padding: 20px;
+    position: relative;
+}
+.main_info p{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+}
+.info{}
+.info li{
+    padding: 15px 0;
+    border-bottom: 1px solid gray;
+}
+.info li a{
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(158, 158, 158);
+}
+
+.info li a:hover{
+    color: white;
+}
+.main_plus{}
+
+.main_plus a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../source/sprite.png) no-repeat;
+    background-position: -1135px -564px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.main_search{
+    margin-top: 10px;
+    width: 1200px;
+    height: 90px;
+    background-color: rgb(46, 46, 75);
+}
